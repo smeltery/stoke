@@ -6,6 +6,7 @@ import { parsePage } from "../web/docs/parse";
 import { searchPages } from "../web/docs/search/index";
 import { pageMarkdown } from "../web/docs/actions/markdown";
 import type { DocNode, DocPage } from "../web/docs/model";
+import { highlightCode } from "../web/docs/rendering/highlight";
 
 function parse(markdown: string, routes = new Map<string, string>()) {
   return parsePage({
@@ -15,6 +16,19 @@ function parse(markdown: string, routes = new Map<string, string>()) {
   }, routes);
 }
 const flatten = (nodes: DocNode[]): DocNode[] => nodes.flatMap((node) => [node, ...flatten(node.children ?? [])]);
+
+test("code highlighting covers guide languages and escapes plain text", () => {
+  for (const [label, code] of [
+    ["Terminal", 'export IMAGE="ghcr.io/smeltery/kiln:latest"'],
+    ["yaml", "runner:\n  enabled: true"], ["json", '{"enabled":true}'],
+  ]) {
+    const html = highlightCode(code, label);
+    const { document } = parseHTML(`<html><body><code>${html}</code></body></html>`);
+    expect(document.querySelector('[class^="hljs-"]'), label).toBeTruthy();
+    expect(document.querySelector("code")!.textContent).toBe(code);
+  }
+  expect(highlightCode("<script>alert(1)</script>", "text")).toBe("&lt;script&gt;alert(1)&lt;/script&gt;");
+});
 
 test("Markdown retains nested code, tables, all sections and stable heading anchors", () => {
   const page = parse('# Example\n\nIntroduction.\n\n## First\n\n- Item\n\n  ```sh\n  echo test\n  ```\n\n## First\n\n| Key | Value |\n| :-- | --: |\n| one | two |\n\n## Last\n\nLast section.');
