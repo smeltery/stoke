@@ -7,6 +7,8 @@
 [![Flox](https://img.shields.io/badge/Flox-reproducible-7A4D16)](.flox/env/manifest.toml)
 [![License](https://img.shields.io/badge/license-PolyForm_Shield-blue)](LICENSE)
 
+[Website](https://stoke-two.vercel.app) · [Brand guide](https://stoke-two.vercel.app/assets/brand/)
+
 Stoke is the shared workspace for [Kiln](https://github.com/smeltery/kiln) and
 [Bellows](https://github.com/smeltery/bellows): a runner environment and a local
 workflow orchestrator for GitHub Actions. Clone, set up and update the pair from

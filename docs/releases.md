@@ -14,11 +14,16 @@ reproducibility matters.
 
 ## Landing site
 
-[`vercel.json`](../vercel.json) follows Harbor's static deployment setup. Import
-`smeltery/stoke` into Vercel with the repository root as the project root; the
-build copies `site/` and `assets/` into `dist/site`. No environment variables or
-runtime services are required. This repository does not provision a deployment
-or domain automatically.
+The production site is [stoke-two.vercel.app](https://stoke-two.vercel.app),
+with the [brand guide](https://stoke-two.vercel.app/assets/brand/) served from the
+same deployment. The Vercel project is
+[nicholas-adamous-projects/stoke](https://vercel.com/nicholas-adamous-projects/stoke)
+under the `nicholasadamou` account and is connected to `smeltery/stoke`.
+Pushes to `main` deploy to production through Vercel's GitHub integration.
+
+[`vercel.json`](../vercel.json) follows Harbor's static deployment setup, with the
+repository root as the project root. The build copies `site/` and `assets/` into
+`dist/site`. No environment variables or runtime services are required.
 
 For other hosts, run `bun run build:site` and publish `dist/site`.
 
