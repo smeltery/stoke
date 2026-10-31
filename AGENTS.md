@@ -13,6 +13,9 @@ Use Bun for repository tooling and Bash for the workspace script. Keep source
 files within `budget.json`. Reuse Harbor's navigation, setup, copy and workflow
 demo patterns. Use the family palette and local fonts in `assets/brand`.
 Keep member logos unchanged, and preserve the font licenses and `LICENSE`.
+The documentation shell reuses Convrt's layout and interactions. Preserve its
+keyboard search, mobile navigation and page actions. Edit Markdown sources;
+refresh member snapshots with `bun run docs:sync` and review their pinned refs.
 
 Regenerate owned artwork with `bun run brand:build`. Review the visual changes,
 then run `bun run brand:update`. Checksums verify integrity, not appearance.

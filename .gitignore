@@ -8,6 +8,7 @@ dist/
 .flox/run/
 .flox/log/
 .flox/lib/
-kiln/
-bellows/
+/kiln/
+/bellows/
+web/docs/content.generated.json
 .vercel/

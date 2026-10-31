@@ -4,7 +4,7 @@ const files = (await $`git ls-files --cached --others --exclude-standard`.text()
 let total = 0;
 for (const file of files) {
   if (file.endsWith(".svg")) continue;
-  if (!/\.(?:sh|ts|js|html|css)$/.test(file)) continue;
+  if (!/\.(?:sh|tsx?|js|html|css)$/.test(file)) continue;
   const lines = (await Bun.file(file).text()).trimEnd().split("\n").length;
   total += lines;
   const limit = budget.files[file] ?? budget.perFile;

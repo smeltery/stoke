@@ -19,9 +19,11 @@ Cloning sources is separate from installing the CLI or pulling an image.
 `scripts/fleet.sh` reads a manifest and validates existing checkouts before
 touching them. There are no Git submodules or combined product releases.
 
-The static site follows Harbor's layout and interaction patterns. Its workflow
-demo is illustrative and executes no commands. A build copies the site and
-assets into `dist/site`; no server or runtime API is required.
+The landing site follows Harbor's layout and interaction patterns. Its workflow
+demo is illustrative and executes no commands. Documentation reuses Convrt's
+shell, search, mobile navigation and page actions with Stoke's identity.
+The build renders Markdown into static HTML at each documentation route and
+bundles a React client for interactions. No server or runtime API is required.
 
 The brand library reuses the member palettes, fonts and unmodified member logos.
 Stoke's angular flame joins Kiln's gold and Bellows' ember in one family mark.

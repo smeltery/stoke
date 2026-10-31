@@ -2,6 +2,10 @@
 
 Stoke brings Kiln and Bellows into one workspace for local GitHub Actions feedback.
 
+Read the [documentation site](https://stoke-two.vercel.app/docs/) for the workspace,
+Bellows and Kiln guides, command search and code examples. The site uses this
+repository's Markdown and [pinned member snapshots](SOURCES.md).
+
 - [Getting started](getting-started.md): workspace setup, runtime requirements and first run.
 - [Usage](usage.md): safe updates and everyday workflow.
 - [Configuration](configuration.md): fleet membership, runner mappings and privacy.

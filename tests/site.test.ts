@@ -65,7 +65,8 @@ test("landing page and brand guide local links and resources exist", () => {
         expect(document.getElementById(link.slice(1)), `${path}: ${link}`).toBeTruthy();
       } else {
         const base = path.startsWith("site/") && link.startsWith("./assets/") ? "." : resolve(path, "..");
-        expect(existsSync(resolve(base, link)), `${path}: ${link}`).toBe(true);
+        const target = link.startsWith("/") ? resolve("dist/site", `.${link}`) : resolve(base, link);
+        expect(existsSync(target), `${path}: ${link}`).toBe(true);
       }
     }
   }

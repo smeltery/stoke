@@ -7,7 +7,7 @@
 [![Flox](https://img.shields.io/badge/Flox-reproducible-7A4D16)](.flox/env/manifest.toml)
 [![License](https://img.shields.io/badge/license-PolyForm_Shield-blue)](LICENSE)
 
-[Website](https://stoke-two.vercel.app) · [Brand guide](https://stoke-two.vercel.app/assets/brand/)
+[Website](https://stoke-two.vercel.app) · [Documentation](https://stoke-two.vercel.app/docs/) · [Brand guide](https://stoke-two.vercel.app/assets/brand/)
 
 Stoke is the shared workspace for [Kiln](https://github.com/smeltery/kiln) and
 [Bellows](https://github.com/smeltery/bellows): a runner environment and a local
@@ -66,7 +66,9 @@ stoke/
 
 ## Documentation and development
 
-Start with [the documentation index](docs/README.md). The
+Start with [the documentation site](https://stoke-two.vercel.app/docs/) or
+[the Markdown index](docs/README.md). The site covers the workspace, Bellows
+and Kiln with search, code examples and page actions. The
 [development guide](docs/development.md) covers Flox, checks, hooks and the site.
 [Brand guidance](assets/brand/README.md) documents the shared identity, reusable
 artwork and asset generation. Contributor instructions live in [AGENTS.md](AGENTS.md).

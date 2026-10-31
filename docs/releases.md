@@ -22,8 +22,10 @@ under the `nicholasadamou` account and is connected to `smeltery/stoke`.
 Pushes to `main` deploy to production through Vercel's GitHub integration.
 
 [`vercel.json`](../vercel.json) follows Harbor's static deployment setup, with the
-repository root as the project root. The build copies `site/` and `assets/` into
-`dist/site`. No environment variables or runtime services are required.
+repository root as the project root. Vercel installs the locked Bun dependencies
+and runs `bun run build:site`. The build copies the landing site and assets,
+then renders and bundles documentation routes under `dist/site/docs`.
+No environment variables or runtime services are required.
 
 For other hosts, run `bun run build:site` and publish `dist/site`.
 

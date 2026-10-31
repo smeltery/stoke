@@ -6,5 +6,6 @@ bun run check:budget
 bun run brand:check
 actionlint
 shellcheck scripts/*.sh .githooks/pre-commit
-bun test ./tests
 bun run build:site
+bun run check:types
+bun test ./tests
