@@ -1,0 +1,23 @@
+{
+  "name": "stoke",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "packageManager": "bun@1.3.14",
+  "scripts": {
+    "check": "bash scripts/check.sh",
+    "test": "bun test ./tests",
+    "build:site": "bun scripts/build-site.ts",
+    "check:docs": "bun scripts/check-docs.ts",
+    "check:budget": "bun scripts/check-budget.ts",
+    "brand:build": "bun scripts/build-brand.ts",
+    "brand:check": "bun scripts/check-brand.ts",
+    "brand:update": "bun scripts/check-brand.ts --update"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.13",
+    "markdownlint": "0.41.1",
+    "mermaid": "12.1.0",
+    "opentype.js": "1.3.4",
+    "sharp": "0.35.5"
+  }
+}

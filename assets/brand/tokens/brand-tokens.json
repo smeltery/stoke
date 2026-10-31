@@ -1,0 +1,30 @@
+{
+  "name": "Stoke",
+  "version": "1.0.0",
+  "colors": {
+    "ink": "#191C22",
+    "paper": "#F5F3ED",
+    "gold": "#E5B05C",
+    "ember": "#F06A43",
+    "sand": "#EADCCA",
+    "steel": "#626B75",
+    "burnt-gold": "#7A4D16",
+    "burnt-ember": "#A9361C",
+    "text-on-dark": "#BBC2CA",
+    "surface-dark": "#242931",
+    "border": "#DADBD5"
+  },
+  "fonts": { "sans": "Space Grotesk", "mono": "JetBrains Mono" },
+  "type": {
+    "display": { "size": 64, "lineHeight": 68, "weight": 600 },
+    "heading": { "size": 32, "lineHeight": 38, "weight": 600 },
+    "body": { "size": 16, "lineHeight": 26, "weight": 400 },
+    "utility": { "size": 12, "lineHeight": 18, "weight": 500 }
+  },
+  "layout": { "unit": 4, "radius": 8 },
+  "logo": {
+    "clearSpace": "1/4 symbol height",
+    "minimumSymbolHeightPx": 16,
+    "minimumLockupWidthPx": 160
+  }
+}

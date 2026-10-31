@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+!.env.example
+.flox/cache/
+.flox/run/
+.flox/log/
+.flox/lib/
+kiln/
+bellows/
+.vercel/

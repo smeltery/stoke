@@ -1,0 +1,5 @@
+* text=auto
+assets/brand/fonts/*-OFL.txt -text -whitespace
+*.png binary
+*.ico binary
+*.ttf binary
